@@ -21,6 +21,6 @@ git commit -m 'deploy'
 # git push -f git@gitee.com:<USERNAME>/<USERNAME>.gitee.io.git master
 
 # 如果发布到 https://<USERNAME>.gitee.io/<REPO>
-git push -f git@gitee.com:xcc-nsn/life.git master:pages
+git push -f git@github.com:xcc-love/life.git main:pages
 
 cd -
