@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>从零开始搭建一个后台模板</title>
+    <url>/life/2024/11/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>learn</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组的高阶方法</title>
+    <url>/life/2024/11/29/learn2/</url>
+    <content><![CDATA[<p>苦尽甘来</p>
+<h1 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a><code>forEach()</code></h1><p>数组每个元素都执行一次回调函数(循环)。</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">arr.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(item, index, arr)</span><br><span class="line">&#125;)</span><br><span class="line">参数：</span><br><span class="line">- <span class="attr">item</span>: 数组中的每项元素</span><br><span class="line">- <span class="attr">index</span>: 每项元素的做索引值</span><br><span class="line">- <span class="attr">arr</span>: 数组本身</span><br></pre></td></tr></table></figure>
+
+<p>注意：<code>forEach</code>方法没有返回值，不能<code>return</code></p>
+<p><strong>例子：</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="keyword">let</span> newArr = arr.<span class="title function_">filter</span>(<span class="function"><span class="params">item</span> =&gt;</span> item + <span class="number">1</span>) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArr) <span class="comment">// [2, 3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="filter"><a href="#filter" class="headerlink" title="filter()"></a><code>filter()</code></h1><p>检测数组元素，并返回符合条件所有元素的数组。</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">arr.<span class="title function_">filter</span>(<span class="function">(<span class="params">item, index, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(item, index, arr)</span><br><span class="line">  <span class="keyword">return</span> 判断条件</span><br><span class="line">&#125;)</span><br><span class="line">参数：</span><br><span class="line">- <span class="attr">item</span>: 数组中的每项元素</span><br><span class="line">- <span class="attr">index</span>: 每项元素的做索引值</span><br><span class="line">- <span class="attr">arr</span>: 数组本身</span><br></pre></td></tr></table></figure>
+
+<p><strong>例子:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="keyword">let</span> newArr = arr.<span class="title function_">filter</span>(<span class="function"><span class="params">item</span> =&gt;</span> item &gt; <span class="number">2</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newArr) <span class="comment">// [3, 4]</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="find"><a href="#find" class="headerlink" title="find()"></a><code>find()</code></h1><p>检索数组，返回符合传入条件的第一个数组元素。</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">arr.<span class="title function_">find</span>(<span class="function">(<span class="params">item, index, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(item, index, arr)</span><br><span class="line">  <span class="keyword">return</span> 判断条件</span><br><span class="line">&#125;)</span><br><span class="line">参数：</span><br><span class="line">- <span class="attr">item</span>: 数组中的每项元素</span><br><span class="line">- <span class="attr">index</span>: 每项元素的做索引值</span><br><span class="line">- <span class="attr">arr</span>: 数组本身</span><br></pre></td></tr></table></figure>
+
+<p><strong>例子:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span>, <span class="attr">age</span>: <span class="number">19</span>&#125;,</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">&#x27;李四&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span>&#125;</span><br><span class="line">]</span><br><span class="line"><span class="keyword">let</span> d = arr.<span class="title function_">find</span>(<span class="function"><span class="params">item</span> =&gt;</span> item.<span class="property">name</span> === <span class="string">&#x27;张三&#x27;</span>) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(d) <span class="comment">// &#123;name: &#x27;张三&#x27;, age: 19&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="findIndex"><a href="#findIndex" class="headerlink" title="findIndex()"></a><code>findIndex()</code></h1><p>检索数组，返回符合传入条件的第一个数组元素的索引。</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">arr.<span class="title function_">findIndex</span>(<span class="function">(<span class="params">item, index, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(item, index, arr)</span><br><span class="line">  <span class="keyword">return</span> 判断条件</span><br><span class="line">&#125;)</span><br><span class="line">参数：</span><br><span class="line">- <span class="attr">item</span>: 数组中的每项元素</span><br><span class="line">- <span class="attr">index</span>: 每项元素的做索引值</span><br><span class="line">- <span class="attr">arr</span>: 数组本身</span><br></pre></td></tr></table></figure>
+
+<p><strong>例子:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="keyword">let</span> index = arr.<span class="title function_">findIndex</span>(<span class="function"><span class="params">item</span> =&gt;</span> item === <span class="number">3</span>) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(index)  <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="reduce"><a href="#reduce" class="headerlink" title="reduce()"></a><code>reduce()</code></h1><p>将数组所有的元素计算为一个值（从左到右）</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">prod, item</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(prod, item)</span><br><span class="line">  <span class="keyword">return</span> prod + item</span><br><span class="line">&#125;, value)</span><br><span class="line">参数：</span><br><span class="line">- <span class="attr">prod</span>: 之前计算的值</span><br><span class="line">- <span class="attr">item</span>: 每项元素的做索引值</span><br><span class="line">- <span class="attr">value</span>: 计算的初始值，默认为<span class="string">`0`</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>例子:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="keyword">let</span> newValue = arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">prod, item</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> prod + item</span><br><span class="line">&#125;, <span class="number">0</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(newValue) <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="some"><a href="#some" class="headerlink" title="some()"></a><code>some()</code></h1><p>检测数组元素中是否有元素符合指定条件, 返回值<code>true/false</code></p>
+<p><strong>语法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">arr.<span class="title function_">some</span>(<span class="function">(<span class="params">item, index, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(item, index, arr)</span><br><span class="line">  <span class="keyword">return</span> 判断条件</span><br><span class="line">&#125;)</span><br><span class="line">参数：</span><br><span class="line">- <span class="attr">item</span>: 数组中的每项元素</span><br><span class="line">- <span class="attr">index</span>: 每项元素的做索引值</span><br><span class="line">- <span class="attr">arr</span>: 数组本身</span><br></pre></td></tr></table></figure>
+
+<p><strong>例子:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&#x27;张三&#x27;</span>, <span class="string">&#x27;李四&#x27;</span>, <span class="string">&#x27;王五&#x27;</span>]</span><br><span class="line"><span class="keyword">let</span> isZS = arr.<span class="title function_">some</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> item === <span class="string">&#x27;张三&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(isZS)  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="every"><a href="#every" class="headerlink" title="every()"></a><code>every()</code></h1><p>检测数组元素的每个元素是否都符合条件.返回值<code>true/false</code></p>
+<p><strong>语法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">arr.<span class="title function_">every</span>(<span class="function">(<span class="params">item, index, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(item, index, arr)</span><br><span class="line">  <span class="keyword">return</span> 判断条件</span><br><span class="line">&#125;)</span><br><span class="line">参数：</span><br><span class="line">- <span class="attr">item</span>: 数组中的每项元素</span><br><span class="line">- <span class="attr">index</span>: 每项元素的做索引值</span><br><span class="line">- <span class="attr">arr</span>: 数组本身</span><br></pre></td></tr></table></figure>
+
+<p><strong>例子:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">9</span>]</span><br><span class="line"><span class="comment">// 判断数组中的每一项是否都大于5</span></span><br><span class="line"><span class="keyword">let</span> a = arr.<span class="title function_">every</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> item &gt; <span class="number">5</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a)  <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 判断数组中的每一项是否都小于10</span></span><br><span class="line"><span class="keyword">let</span> a = arr.<span class="title function_">every</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> item &lt; <span class="number">10</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a)  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="map"><a href="#map" class="headerlink" title="map()"></a><code>map()</code></h1><p>处理数组的每个元素，并返回处理后的数组。</p>
+<p><strong>语法:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">arr.<span class="title function_">map</span>(<span class="function">(<span class="params">item, index, arr</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(item, index, arr)</span><br><span class="line">  <span class="keyword">return</span> 判断条件/对象</span><br><span class="line">&#125;)</span><br><span class="line">参数：</span><br><span class="line">- <span class="attr">item</span>: 数组中的每项元素</span><br><span class="line">- <span class="attr">index</span>: 每项元素的做索引值</span><br><span class="line">- <span class="attr">arr</span>: 数组本身</span><br></pre></td></tr></table></figure>
+
+<p><strong>例子:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span>, <span class="attr">age</span>: <span class="number">19</span>&#125;,</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">&#x27;李四&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span>&#125;</span><br><span class="line">]</span><br><span class="line"><span class="comment">// 用法一</span></span><br><span class="line"><span class="keyword">let</span> arr1 = arr.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> item.<span class="property">name</span>) </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr1)  <span class="comment">// [&#x27;张三&#x27;, &#x27;李四&#x27;]</span></span><br><span class="line"><span class="comment">// 用法二</span></span><br><span class="line"><span class="keyword">let</span> arr2 = arr.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    ...item,</span><br><span class="line">    item.<span class="property">sex</span> = <span class="string">&#x27;男&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr2) <span class="comment">// [&#123;name: &#x27;张三&#x27;, age: 19, sex: &#x27;男&#x27;&#125;, &#123;name: &#x27;李四&#x27;, age: 20, sex: &#x27;男&#x27;&#125;]</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>learn</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>javascript</tag>
+        <tag>Array</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搭建个人博客</title>
+    <url>/life/2024/11/29/learn1/</url>
+    <content><![CDATA[<p>种一棵树最好的时间是十年前和现在。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>也是无意间看到一个写个人博客的，看着非常的好看，于是乎一个牛逼而又der想法就产生了：我也要搞一个人的blog，就显摆一下，就是玩。于是这个blog就产生了，写完之后的也是非常的激动，赶紧发给朋友，显摆显摆。后来朋友也都很惊讶，确实还是比较简单的，下面就把这个创建blog的流程写一些，其实网上的流程很多，写的肯定也都比我好，例如我刚就看到一篇，写的真的好细节，我都没想到好多地方，可能一会就要借用他的文章亿点点东西。那为啥不把他的文章复制过来呢，那总要干点自己的事儿，看别人做，和自己做的感觉还是不一样的。慢慢来吧，写的不好也带给我看。那就开始吧。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>要想搭建自己的博客，需要有一点点前端的知识，例如会点Markdown语法，Git，Node等，还真带有点专业知识，如果你连听都没听过的话，直接放弃，或者联系我，我帮帮你。当然我写的只是一个静态的页面，并没有后台，如果你想搞那种有服务器的，看看别的吧，学会之后记得教教我。编译器我用的VsCode，非常轻量级，WebStorm完全可以，你开心就好。Node和Git是必须安装的。部署的话我是部署到了Gitee上了，因为GitHub相对来说比较慢，反正都行。</p>
+<h2 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h2><p>好了，先初始化一blog项目，随便新建一个文件夹，然后右键单机，在终端中打开，运行下面代码，或者直接在VsCode上运行。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g		//安装框架</span><br><span class="line">hexo init blog		//初始化一个博客</span><br><span class="line">cd blog		//切换到blog文件夹</span><br><span class="line">npm install		//安装依赖</span><br><span class="line">hexo server		//运行博客</span><br></pre></td></tr></table></figure>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>到这里你就的博客就已经搭好了，你完全可以用那个博客，然后修改一下，发表一点文章就行了。但如过你想让你的blog更好看一点，就可以挑选一个<a href="https://hexo.io/themes/">主题</a>（有时候网速是比较慢的），如果看上哪个主题了就点击一下标题，别点击图片，点击图片是预览（有的还预览不成），然后你就进入了GitHub地址，然后你就认真看看就行了，可能你看不懂，但你看懂了就真的懂了。反正我也没看懂。</p>
+<h2 id="打包为静态网站"><a href="#打包为静态网站" class="headerlink" title="打包为静态网站"></a>打包为静态网站</h2><p>我建议新手就直接用原始的主题就行了，花里胡哨的没好处，厉害的人都不用我说，做的都比我的好。所以我说的多了也没啥用。用原始的哈，主要是我不想多写了，其实每一份主题都带有一份主题配置文件，说的都非常的详细，本来想截图的，但是想了想也没必要，还要复制链接，太麻烦，你们需要真正的成长。然后就是下面的命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g 		//会生成一个public文件，就是静态网站文件，部署即可</span><br></pre></td></tr></table></figure>
+<p>会生成一个pubilc文件，把这个文件提交到Gitee上。</p>
+<h2 id="网站部署"><a href="#网站部署" class="headerlink" title="网站部署"></a>网站部署</h2><p>部署就比较简单了，在你的Gitee项目上找到如下页面，点击服务<br><img src="https://img-blog.csdnimg.cn/54bbae0c87d54c65bd52ab78930a54b3.png" alt="在这里插入图片描述" loading="lazy"><br>点击Gitee Pages，按照他的要求一步一步配置就行了，可能还要身份证正反面，还要手拿身份证，拍个照片，可不是贷款，亲测不是骗人的。<br><img src="https://img-blog.csdnimg.cn/eec84915bc5046a0b2c9674784caaacc.png" alt="在这里插入图片描述" loading="lazy"><br>只要不是星期天，审核还是很快的，审核完成之后，就可以把你打包的那个文件部署上来了。然后你就会，哇！在任何浏览器上输入那个网址，就可以看到你的网站了，不要问我网址在哪里？，你部署成功之后就看到了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>1、你在Gitee上的仓库名成尽量起的好一点，你像我的地址<a href="https://xcc-nsn.gitee.io/life/">https://xcc-nsn.gitee.io/life/</a>,最后的那个life就是我的仓库名，不知道中文行不行，你可以挑战一下。<br>2、可以把部署的那个pages文件拉出来单独建了一个分支，然后直接部署pages分支了，你也可以这样，但要怎么做呢，首先在根目录下面建一个deploy.sh文件，把下面的代码复制上去</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#自动化提交</span><br><span class="line">#!/usr/bin/env sh</span><br><span class="line"></span><br><span class="line"># 确保脚本抛出遇到的错误</span><br><span class="line">set -e</span><br><span class="line"></span><br><span class="line"># 生成静态文件</span><br><span class="line">npm run build</span><br><span class="line"></span><br><span class="line"># 进入生成的文件夹</span><br><span class="line">cd public</span><br><span class="line"></span><br><span class="line"># 如果是发布到自定义域名</span><br><span class="line"># echo &#x27;www.example.com&#x27; &gt; CNAME</span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &#x27;deploy&#x27;</span><br><span class="line"></span><br><span class="line"># 如果发布到 https://&lt;USERNAME&gt;.gitee.io</span><br><span class="line"># git push -f git@gitee.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.gitee.io.git master</span><br><span class="line"></span><br><span class="line"># 如果发布到 https://&lt;USERNAME&gt;.gitee.io/&lt;REPO&gt;</span><br><span class="line"># 这里需要改一下，把下面的仓库地址换成你的仓库地址就行了</span><br><span class="line">git push -f git@gitee.com:xcc-nsn/life.git master:pages</span><br><span class="line"></span><br><span class="line">cd -</span><br></pre></td></tr></table></figure>
+<p>这就行了，肯定要改一下呀，这是我的配置，我在配置文件中已经标注了，就是倒数第二行，你定睛一看就可以了。然后运行下面的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//项目自动打包提交到Gitee上</span><br><span class="line">npm run deploy  </span><br></pre></td></tr></table></figure>
+<p>当然还有最重要的就是，你必须要在git bash上运行这段命令，至于为啥我也不清楚，反正我的VsCode配置了git bash了，本来就的没啥用，现在终于看到用途了（哈哈），这你们就自己弄吧。<br>3、使用主题的，配置文件一定要仔细看，按照配置文件的配置就好了，更改成自己的信息，就是你的了。我遇到了各种图片出不来，视频导入不进去，都是一点一点试出来的。<br>5、图片可以传到CSDN或者掘金上变成链接，然后使用，但是需要发布文章，例如这些图片就是发到CSDN上的，好像还带水印，就是带水印。<br>6、遇到问题多搜搜，多试试，总会解决的。</p>
+<h2 id="个人心得"><a href="#个人心得" class="headerlink" title="个人心得"></a>个人心得</h2><p>说着看别人的文章，也没看。不要害怕一件事，只要你去做，总会做完的。管他好不好<code>持之以恒，问心无愧</code>，一个高中同学给我说的，说的真好。其实我这篇文章并没有写什么，懂得人都能看出来，没什么技术含量，关键是不懂得人他也看不出来。那就先这样吧，可能有一些不恰当的地方,记的给我指出来，反正文章我随时都能改。邮箱我放在关于页面了。你们加油。</p>
+]]></content>
+      <categories>
+        <category>learn</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>This is my first paper</title>
+    <url>/life/2024/11/29/life1/</url>
+    <content><![CDATA[<p>这将是你看到的，我写的第一篇文章。以后就不一定能看到了，所以请怀着一颗激动的心情去看。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是我搭建的个人博客，起初的目的是用来发表一些学习的文章，但一想我自己就是一个小白，还教别人学习，于是我果断放弃（也不完全放弃，容我挣扎挣扎）。然后我既想搭建一个网站去显摆一下，又啥也不会。然后我哥突然蹦到了我的面前，对呀，我专业知识不太行，但是我哥可以呀，于是一个“邪恶”的计划在我的脑海中产生，要么我就“盗用”他的文章，要么就把他的文章链接放在这上面，不就行了吗。那我搭建这个网站干啥，直接用他的不就行了。那必须带写点我自己的东西呀，例如这篇文章。这个网站自己带了一篇文章，我也没看，先留着吧，当个模板使用，内容不知道行不行，反正格式还挺好看。就是那个“从零开始搭建一个后台模板”。</p>
+<h2 id="网站详情"><a href="#网站详情" class="headerlink" title="网站详情"></a>网站详情</h2><p>网站功能看着花里胡哨，其实也就那样，动画还是很好看的。很多功能都已经集成了，我也不知道怎么改，我一改它就没了，所以先看着吧。搜索功能好像很鸡肋，看着好像也能搜，但又好像啥也搜不到，这个我要好好研究研究。毕竟他可是在导航栏上的，还是最很要的。首页背景图片，其实是可以换成视频的，那个视频我都从demo网站上下载下来了，就是设置不成功，那就先用这张图片吧，视频我再试试。网站刚搭建下来，需要完成的东西还很多。</p>
+<h2 id="网站模块"><a href="#网站模块" class="headerlink" title="网站模块"></a>网站模块</h2><p>这个网站只要有几个模块：首页、档案、友情链接、关于，至于为什么设置这几个模块，我也不知道，因为它是这个主题自己携带的，但我看好像所有的blog都是这几个模块。下面说说这几个模块要干啥。</p>
+<h3 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h3><p>首先是首页模块，这个模块是比较好看的，背景我必须要把它设置成视频，首页主要显示有文章分类，和文章，还有个个人信息（除了显摆没啥用）。</p>
+<h4 id="文章分类"><a href="#文章分类" class="headerlink" title="文章分类"></a>文章分类</h4><p> <strong>文章主要有三大类： Life,  Learn,  Read</strong>（但凡有点小学英语水平的都能看懂吧）<br> <strong>Life:</strong> 就记录一点生活中的一些事儿吧，例如今天早上去上班的时候，看到天上的云真的很好看，想吟诗一首，奈何没文化。今天也没有记录，以后就会记录下来，然后放在网站上，还有就是和婷姐的可以让你们看到的事儿，懂？。<br> <strong>Learn:</strong> 可能主要是“盗用”我哥的文章，自己也会写点，但是不多，我就不主要搞技术了，搞点文艺(^_^) 。学习分类呢主要是前端模块，像vue，react等还有与前端相关的比较有意思的知识。懂得都懂，不懂了说了也不懂，术业有专攻嘛。<br> <strong>Read:</strong> 主要是记录一下读的书籍，读的书也不多，没事儿，慢慢积累。先推荐一本《明朝那些事儿》，太好看了（没文化只能用这了），看似在写历史，实则写人生呀。</p>
+<h4 id="文章标签"><a href="#文章标签" class="headerlink" title="文章标签"></a>文章标签</h4><p>标签可以设置好多，但我设置了，在哪里看呢，没明白，小事儿，先不管它。</p>
+<h4 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h4><p>最重要的也就是文章了吧，反正我读书少，技术类文章不会写，其它文章也不会写。凑合着看，文章也可以设置封面但是我比较懒不想一个一个设置，就先用一张吧，也没有什么好看的图片。如果你们有好看的图片请一定要发给我，我不一定设置成文章封面，但我肯定可以收到（哈哈哈）。还有就是文章可能有错别的或者其它的问题，请与我联系，不知道怎么联系的，再等等，等我想出来再说。还有一点最重要，文章是可以打赏的，这我就很喜欢了，多多少少意思意思，你懂的？说点官方的话就是：你的支持就是我前进的动力，兄弟们给点力。</p>
+<h3 id="档案"><a href="#档案" class="headerlink" title="档案"></a>档案</h3><p>该模块主要是记录发布文章的历史，就更档案似的，感觉好像也没多大作用，可能我还没看到作用。</p>
+<h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h3><p>就放一些牛人的链接吧，我打算把我哥构建的博客链接放上来，干货很多。像我这个主题的作者也把他放进来。</p>
+<h3 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h3><p>这个模块还没想好写啥，先凑合着看吧。</p>
+<hr>
+<p><em><strong>暂定就这几个模块，后续可能还会增加。</strong></em></p>
+<h2 id="个人心得"><a href="#个人心得" class="headerlink" title="个人心得"></a>个人心得</h2><p>把这个网站搭建起来用的时间没多少，但是解决其中的很多问题就很难，改了许多配置，解决了好多问题。现在也算是成型了，好多细节还是需要改。先看着吧。如果你也想搭建个人博客的话，后续我在出一篇搭建个人博客的文章。或者在网上，在B站上搜，很多的。<br>不知不觉也写了这么多，都是在地铁上写的，在北京这个大城市生存，还是很不容易的，看着我说了那么多，写这写那的，最后能不能坚持下来都不好说。每天工作上会遇到很多的问题，很多也是自己不会的。每天都很焦虑，加上每天上下班通勤三个小时左右，真的很疲惫。每天看着地铁上人来人往，大家都好疲惫，非常木纳的走着，眼里看不到一点光亮，真的很像“僵尸”。还好我心里是有期望的，暂时没有像他们一样变成“僵尸”。希望我能一直坚持下去吧。</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《明朝那些事儿》</title>
+    <url>/life/2024/11/29/read/</url>
+    <content><![CDATA[<p>如果读完一本书能让你继续读下一本书，那这本书就是好书</p>
+<h2 id="简评"><a href="#简评" class="headerlink" title="简评"></a>简评</h2><p>《明朝那些事儿》讲述从1344年到1644年，明朝三百年间的历史。作品以史料为基础，以年代和具体人物为主线，运用小说的笔法，对明朝十七帝和其他王公权贵和小人物的命运进行全景展示，尤其对官场政治、战争、帝王心术着墨最多。作品也是一部明朝政治经济制度、人伦道德的演义。 </p>
+<hr>
+<p>作者：当年明月<br>本名：石悦</p>
+<h2 id="文章金句"><a href="#文章金句" class="headerlink" title="文章金句"></a>文章金句</h2><p><strong>这是我在一个视频中看到的一些文章中的句子，觉得写的比较好分享一下</strong><br>1、张牙舞爪的人，往往是脆弱的。因为真正强大的人，是自信的，自信就会温和，温和就坚定。<br>2、悲剧的开端，往往也是荣耀的起点。<br>3、你还很年轻，将来你会遇到很多人，经历很多事，得到很多，也会失去很多，但是无论如何，有两样东西你觉丢不能丢弃，一个叫良心，一个叫理想。<br>4、对于军人而言，最大的荣耀莫过于找到那个打败过的自己的人，然后打败他。<br>5、不要以为渺小的就没有力量；不要以为卑微的就没有尊严。<br>6、一个人可以影响多数人于暂时，也可以影响少数人于永远，但无法影响多数人于永远。<br>7、能改的叫做缺点，不能改的叫做弱点。<br>8、懂得暴力的人是强壮的，懂得克制暴力的人是强大的。<br>9、只有夺走你所拥有的一切，你才能摆脱世间之一切浮躁与诱惑，经受千锤百炼，心如止水，透悟天地。<br>10、因为他不明白，在这个世界上有些原则是不能谈判的，如国家、主权和尊严。<br>11、无论何时、何地、有何种理由，人性都是不能也不会被泯灭的，它将永远屹立于天地之间。 </p>
+<h2 id="观后感"><a href="#观后感" class="headerlink" title="观后感"></a>观后感</h2><p>《明朝那些事儿》终于看完了，374章真的好长呀，也不知看了多久，总之很多情节都已经忘了，什么时间谁谁谁干了啥啥啥，记住的人没几个，就记得开国皇帝朱元璋很厉害，废除了几百年的宰相制（用他的那高深莫测的智谋），也记得他好残忍，几乎把和他闯天下的朋友，兄弟，将领，大臣几乎全部杀完了，真的好可怜；也记得他的儿子篡位成功（我觉得应该篡位，可能我的目光短浅），他真的好厉害，开创了永乐盛世，写了永乐大典，为镇守北方迁都北京，修建水渠，派郑和六次下西洋，宣我大明盛世；也记得于谦，张居正力挽狂澜，为明朝续命；记得无数（实际上没多少，屈指可数）正义之士不畏强权，勇斗奸臣，如杨涟（到现在都能想到他耳朵被钉入钉子的情形）；也记得魏忠贤如何混乱朝堂，嚣张跋扈，恨得牙痒痒。也认识了许许多多的人，如送东阳马生序的作者余濂，七下西洋的郑和（原名马三保），一生放荡不羁的唐伯虎，一代名将戚继光，戏曲大家汤显祖，用脚丈量天下的徐霞客……好多好多。他们身上有可能也有很多的缺点，到我真的看到了他们的精神，一种中华民族延绵不绝的精神。你真的很感动，看了这样一本有意义的书籍，虽然你也看到了历史的黑暗，曲折，不公，压抑，但总有那么一束光从始至终，有时候他可能微弱的照不清前方的的路，但总会有人去点燃它，让它永远屹立于天地之间，永不熄灭。非常高兴可以认识他们。这本书看似在写历史，实际上在写人生呀。明朝二百七十六年的历史被一个名叫当年明月的人从二十多岁写到了二十多岁，有趣。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>我是非常推荐这一本书的，记得刚听到这本书名字的时候就没啥兴趣，感觉不就是一本写历史的书吗，很有可能没意思。后来实在是闲着没啥事，要不找本书看看，升华一下。然后看到这本书的评价很高，就抱着试试的心态读了。刚开始也是有点坚持不下去，然后就是每天少看一点，就这样养成了习惯。后期读书完全是被吸引了。记得那时候在北京的地铁上读的时候，直接把我搞破防了，在地铁上哭着读者，完全被里面的情节吸引了。每天回来都想给别人分享其中的内容，可好像没人喜欢听。可能只有亲自读过的人才能体会到其中的韵味吧。希望你们可以喜欢。如果喜欢请点击下面的图标支持一下^_^</p>
+]]></content>
+      <categories>
+        <category>read</category>
+      </categories>
+      <tags>
+        <tag>read</tag>
+      </tags>
+  </entry>
+</search>

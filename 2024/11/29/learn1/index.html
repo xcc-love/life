@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="种一棵树最好的时间是十年前和现在。 前言也是无意间看到一个写个人博客的，看着非常的好看，于是乎一个牛逼而又der想法就产生了：我也要搞一个人的blog，就显摆一下，就是玩。于是这个blog就产生了，写完之后的也是非常的激动，赶紧发给朋友，显摆显摆。后来朋友也都很惊讶，确实还是比较简单的，下面就把这个创建blog的流程写一些，其实网上的流程很多，写的肯定也都比我好，例如我刚就看到一篇，写的真的好细节">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建个人博客">
+<meta property="og:url" content="https://xcc-nsn.gitee.io/life/2024/11/29/learn1/index.html">
+<meta property="og:site_name" content="Life">
+<meta property="og:description" content="种一棵树最好的时间是十年前和现在。 前言也是无意间看到一个写个人博客的，看着非常的好看，于是乎一个牛逼而又der想法就产生了：我也要搞一个人的blog，就显摆一下，就是玩。于是这个blog就产生了，写完之后的也是非常的激动，赶紧发给朋友，显摆显摆。后来朋友也都很惊讶，确实还是比较简单的，下面就把这个创建blog的流程写一些，其实网上的流程很多，写的肯定也都比我好，例如我刚就看到一篇，写的真的好细节">
+<meta property="og:locale">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/54bbae0c87d54c65bd52ab78930a54b3.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/eec84915bc5046a0b2c9674784caaacc.png">
+<meta property="article:published_time" content="2024-11-29T02:50:09.095Z">
+<meta property="article:modified_time" content="2024-11-29T02:50:09.096Z">
+<meta property="article:author" content="xiaocaicai">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/54bbae0c87d54c65bd52ab78930a54b3.png">
+
+    <meta name="keywords" content="bolg, 个人博客, learn">
+
+
+<title >搭建个人博客</title>
+
+<!-- Favicon -->
+
+    <link href='/life/static/img/link.png?v=1.2.5' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/life/static/img/link.png?v=1.2.5' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+    <link href='/life/apple-touch-icon.png?v=1.2.5' rel='apple-touch-icon' sizes='180x180' ></link>
+
+
+    <link href='/life/site.webmanifest' rel='manifest' ></link>
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/life/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+
+
+    
+
+    
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/life/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"xcc-nsn.gitee.io","author":"xiaocaicai","root":"/life/","typed_text":["Web Developer"],"favicon":{"logo":"/static/img/link.png","icon16":"/static/img/link.png","icon32":"/static/img/link.png","appleTouchIcon":"apple-touch-icon.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"/static/img/link.png","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"theme_version":"1.2.5","theme":{"switch":true,"default":"style-light"},"search":{"enable":true,"type":"local","href":"https://www.google.com/search?q=site:","domain":null,"preload":true,"trigger":"auto","path":"search.xml"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。"},"creative_commons":{"license":"by-nc-sa","language":"deed.zh","post":false,"clipboard":false},"swup":false};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/life/css/index.css?v=1.2.5" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+
+    
+
+
+
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+          <div data-scroll-section id="content" class="trm-scroll-section">
+
+            <div class="locomotive-scroll__sticky-target" style=" position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
+
+            <!-- top bar -->
+            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+			<a href="/life/" class="trm-logo-frame trm-anima-link">
+				
+					<img src="/life/static/img/link.png" alt="logo">
+				
+				
+					<div class="trm-logo-text">
+						小<span>菜菜</span>
+					</div>
+				
+			</a>
+			<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+
+			<!-- menu -->
+			<div class="trm-menu">
+				<nav>
+					<ul>
+						
+						<li class="menu-item-has-children ">
+							<a  href="/life/" target="">
+								首页
+							</a>
+							
+						</li>
+						
+						<li class="menu-item-has-children ">
+							<a  href="/life/archives/" target="">
+								档案
+							</a>
+							
+						</li>
+						
+						<li class="menu-item-has-children ">
+							<a  href="/life/tags/" target="">
+								标签
+							</a>
+							
+						</li>
+						
+						<li class="menu-item-has-children ">
+							<a  href="/life/links" target="">
+								友情链接
+							</a>
+							
+						</li>
+						
+						<li class="menu-item-has-children ">
+							<a data-no-swup href="/life/about" target="">
+								关于
+							</a>
+							
+						</li>
+						
+					</ul>
+				</nav>
+			</div>
+			<!-- menu end -->
+			
+			<!-- mode switcher place -->
+			
+			<div class="trm-mode-switcher-place">
+				<!-- <div class="trm-hidden-switcher"> -->
+					<div class="trm-mode-switcher">
+					  <i class="far fa-sun"></i>
+					  <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+					  <label class="trm-swich" for="trm-swich"></label>
+					  <i class="far fa-moon"></i>
+					</div>
+				  <!-- </div> -->
+			</div>
+			
+			<!-- mode switcher place end -->
+
+			
+				
+				<div id="trm-search-btn" class="trm-search-btn">
+					<i class="fas fa-search"></i>
+				</div>
+				 
+			 
+
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" src="/life/static/img/bg-learn.jpg" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            Hi my new friend!
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            搭建个人博客
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/life/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2024
+                                    </span
+                                ></li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </a>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    
+
+<div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
+    
+        <div class="trm-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item"><i class="fas fa-user-alt"></i></div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active"><i class="fas fa-th-list"></i></div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20"><img class="trm-avatar" src="/life/img/avatar.jpg" alt="Avatar"> </div>
+    <h5 class="trm-name trm-mb-15">
+        小菜菜
+    </h5>
+    
+    <div class="trm-label">
+        I`m
+        <span class="trm-typed-text">
+            <!-- Words for theme.user.typedText -->
+        </span>
+    </div>
+    
+</div>
+<!-- card header end -->
+
+<!-- sidebar social -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+
+<div class="trm-social">
+    
+        <a href="https://github.com" title="github" rel="nofollow" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    
+        <a href="https://weibo.com/u/5641726253" title="weibo" rel="nofollow" target="_blank">
+            <i class="fab fa-weibo"></i>
+        </a>
+    
+        <a href="https://gitee.com/xcc-nsn" title="heart" rel="nofollow" target="_blank">
+            <i class="far fa-heart"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+
+<!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                地址:
+            </div>
+            <div class="trm-label trm-label-light">
+                火星
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                年龄:
+            </div>
+            <div class="trm-label trm-label-light">
+                18
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                职业:
+            </div>
+            <div class="trm-label trm-label-light">
+                前端小白
+            </div>
+        </li>
+    
+</ul>
+
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#前言"  data-scroll-to="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#准备工作"  data-scroll-to="#准备工作"><span class="toc-number">2.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#初始化项目"  data-scroll-to="#初始化项目"><span class="toc-number">3.</span> <span class="toc-text">初始化项目</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#安装主题"  data-scroll-to="#安装主题"><span class="toc-number">4.</span> <span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#打包为静态网站"  data-scroll-to="#打包为静态网站"><span class="toc-number">5.</span> <span class="toc-text">打包为静态网站</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#网站部署"  data-scroll-to="#网站部署"><span class="toc-number">6.</span> <span class="toc-text">网站部署</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#总结"  data-scroll-to="#总结"><span class="toc-number">7.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#个人心得"  data-scroll-to="#个人心得"><span class="toc-number">8.</span> <span class="toc-text">个人心得</span></a></li></ol>
+</div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="col-lg-8">
+                <div class="trm-content" id="trm-content">
+                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
+
+                    <div class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="far fa-calendar-alt trm-icon"></i><br>
+            11-29
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="far fa-clock trm-icon"></i><br>
+            10:50
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="far fa-user trm-icon"></i><br>
+            xiaocaicai
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article class="trm-publication">
+    <p>种一棵树最好的时间是十年前和现在。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>也是无意间看到一个写个人博客的，看着非常的好看，于是乎一个牛逼而又der想法就产生了：我也要搞一个人的blog，就显摆一下，就是玩。于是这个blog就产生了，写完之后的也是非常的激动，赶紧发给朋友，显摆显摆。后来朋友也都很惊讶，确实还是比较简单的，下面就把这个创建blog的流程写一些，其实网上的流程很多，写的肯定也都比我好，例如我刚就看到一篇，写的真的好细节，我都没想到好多地方，可能一会就要借用他的文章亿点点东西。那为啥不把他的文章复制过来呢，那总要干点自己的事儿，看别人做，和自己做的感觉还是不一样的。慢慢来吧，写的不好也带给我看。那就开始吧。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>要想搭建自己的博客，需要有一点点前端的知识，例如会点Markdown语法，Git，Node等，还真带有点专业知识，如果你连听都没听过的话，直接放弃，或者联系我，我帮帮你。当然我写的只是一个静态的页面，并没有后台，如果你想搞那种有服务器的，看看别的吧，学会之后记得教教我。编译器我用的VsCode，非常轻量级，WebStorm完全可以，你开心就好。Node和Git是必须安装的。部署的话我是部署到了Gitee上了，因为GitHub相对来说比较慢，反正都行。</p>
+<h2 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h2><p>好了，先初始化一blog项目，随便新建一个文件夹，然后右键单机，在终端中打开，运行下面代码，或者直接在VsCode上运行。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g		//安装框架</span><br><span class="line">hexo init blog		//初始化一个博客</span><br><span class="line">cd blog		//切换到blog文件夹</span><br><span class="line">npm install		//安装依赖</span><br><span class="line">hexo server		//运行博客</span><br></pre></td></tr></table></figure>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>到这里你就的博客就已经搭好了，你完全可以用那个博客，然后修改一下，发表一点文章就行了。但如过你想让你的blog更好看一点，就可以挑选一个<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主题</a>（有时候网速是比较慢的），如果看上哪个主题了就点击一下标题，别点击图片，点击图片是预览（有的还预览不成），然后你就进入了GitHub地址，然后你就认真看看就行了，可能你看不懂，但你看懂了就真的懂了。反正我也没看懂。</p>
+<h2 id="打包为静态网站"><a href="#打包为静态网站" class="headerlink" title="打包为静态网站"></a>打包为静态网站</h2><p>我建议新手就直接用原始的主题就行了，花里胡哨的没好处，厉害的人都不用我说，做的都比我的好。所以我说的多了也没啥用。用原始的哈，主要是我不想多写了，其实每一份主题都带有一份主题配置文件，说的都非常的详细，本来想截图的，但是想了想也没必要，还要复制链接，太麻烦，你们需要真正的成长。然后就是下面的命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g 		//会生成一个public文件，就是静态网站文件，部署即可</span><br></pre></td></tr></table></figure>
+<p>会生成一个pubilc文件，把这个文件提交到Gitee上。</p>
+<h2 id="网站部署"><a href="#网站部署" class="headerlink" title="网站部署"></a>网站部署</h2><p>部署就比较简单了，在你的Gitee项目上找到如下页面，点击服务<br><img src="https://img-blog.csdnimg.cn/54bbae0c87d54c65bd52ab78930a54b3.png" alt="在这里插入图片描述" loading="lazy"><br>点击Gitee Pages，按照他的要求一步一步配置就行了，可能还要身份证正反面，还要手拿身份证，拍个照片，可不是贷款，亲测不是骗人的。<br><img src="https://img-blog.csdnimg.cn/eec84915bc5046a0b2c9674784caaacc.png" alt="在这里插入图片描述" loading="lazy"><br>只要不是星期天，审核还是很快的，审核完成之后，就可以把你打包的那个文件部署上来了。然后你就会，哇！在任何浏览器上输入那个网址，就可以看到你的网站了，不要问我网址在哪里？，你部署成功之后就看到了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>1、你在Gitee上的仓库名成尽量起的好一点，你像我的地址<a href="https://xcc-nsn.gitee.io/life/">https://xcc-nsn.gitee.io/life/</a>,最后的那个life就是我的仓库名，不知道中文行不行，你可以挑战一下。<br>2、可以把部署的那个pages文件拉出来单独建了一个分支，然后直接部署pages分支了，你也可以这样，但要怎么做呢，首先在根目录下面建一个deploy.sh文件，把下面的代码复制上去</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#自动化提交</span><br><span class="line">#!/usr/bin/env sh</span><br><span class="line"></span><br><span class="line"># 确保脚本抛出遇到的错误</span><br><span class="line">set -e</span><br><span class="line"></span><br><span class="line"># 生成静态文件</span><br><span class="line">npm run build</span><br><span class="line"></span><br><span class="line"># 进入生成的文件夹</span><br><span class="line">cd public</span><br><span class="line"></span><br><span class="line"># 如果是发布到自定义域名</span><br><span class="line"># echo &#x27;www.example.com&#x27; &gt; CNAME</span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &#x27;deploy&#x27;</span><br><span class="line"></span><br><span class="line"># 如果发布到 https://&lt;USERNAME&gt;.gitee.io</span><br><span class="line"># git push -f git@gitee.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.gitee.io.git master</span><br><span class="line"></span><br><span class="line"># 如果发布到 https://&lt;USERNAME&gt;.gitee.io/&lt;REPO&gt;</span><br><span class="line"># 这里需要改一下，把下面的仓库地址换成你的仓库地址就行了</span><br><span class="line">git push -f git@gitee.com:xcc-nsn/life.git master:pages</span><br><span class="line"></span><br><span class="line">cd -</span><br></pre></td></tr></table></figure>
+<p>这就行了，肯定要改一下呀，这是我的配置，我在配置文件中已经标注了，就是倒数第二行，你定睛一看就可以了。然后运行下面的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//项目自动打包提交到Gitee上</span><br><span class="line">npm run deploy  </span><br></pre></td></tr></table></figure>
+<p>当然还有最重要的就是，你必须要在git bash上运行这段命令，至于为啥我也不清楚，反正我的VsCode配置了git bash了，本来就的没啥用，现在终于看到用途了（哈哈），这你们就自己弄吧。<br>3、使用主题的，配置文件一定要仔细看，按照配置文件的配置就好了，更改成自己的信息，就是你的了。我遇到了各种图片出不来，视频导入不进去，都是一点一点试出来的。<br>5、图片可以传到CSDN或者掘金上变成链接，然后使用，但是需要发布文章，例如这些图片就是发到CSDN上的，好像还带水印，就是带水印。<br>6、遇到问题多搜搜，多试试，总会解决的。</p>
+<h2 id="个人心得"><a href="#个人心得" class="headerlink" title="个人心得"></a>个人心得</h2><p>说着看别人的文章，也没看。不要害怕一件事，只要你去做，总会做完的。管他好不好<code>持之以恒，问心无愧</code>，一个高中同学给我说的，说的真好。其实我这篇文章并没有写什么，懂得人都能看出来，没什么技术含量，关键是不懂得人他也看不出来。那就先这样吧，可能有一些不恰当的地方,记的给我指出来，反正文章我随时都能改。邮箱我放在关于页面了。你们加油。</p>
+
+</article>
+    
+    <div class="trm-reward">
+        
+            <span class="trm-reward-btn trm-glow" onclick='var qr = document.getElementById("qr"); qr.style.display = (qr.style.display === "none") ? "block" : "none";'>
+                <i class="fas fa-hand-holding-usd"></i>
+            </span>
+        
+        <p class="trm-reward-comment">I'm so cute. Please give me money.</p>
+        <div id="qr" style="display:none;">
+            
+                <div style="display:inline-block">
+                    <a rel="noopener" href='/static/img/reward/zfb.jpg' target='_blank' >
+                       <img src="/life/static/img/reward/zfb.jpg" alt="支付宝" loading="lazy">
+                    </a>
+                    <p>支付宝</p>
+                </div>
+            
+                <div style="display:inline-block">
+                    <a rel="noopener" href='/static/img/reward/xccwx.png' target='_blank' >
+                       <img src="/life/static/img/reward/xccwx.png" alt="微信" loading="lazy">
+                    </a>
+                    <p>微信</p>
+                </div>
+            
+        </div>
+    </div>
+
+    
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/life/2024/11/29/life1/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img src="https://img-blog.csdnimg.cn/00ccf2a81bcc4fd8ac0ac3e1aceaa423.jpeg" alt="cover">
+            
+        </a>
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /life/categories/life/">
+                    life
+                </a>
+            </div>
+            <h5>
+                <a href="/life/2024/11/29/life1/" class="trm-anima-link">
+                    This is my first paper
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24-11-29</li>
+                <li>10:50</li>
+                
+                    <li>1.6k</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/life/2024/11/29/hello-world/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img src="https://img-blog.csdnimg.cn/7061a03fc607494a966b41408ec9c41e.jpeg" alt="cover">
+            
+        </a>
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /life/categories/learn/">
+                    learn
+                </a>
+            </div>
+            <h5>
+                <a href="/life/2024/11/29/hello-world/" class="trm-anima-link">
+                    从零开始搭建一个后台模板
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24-11-29</li>
+                <li>10:50</li>
+                
+                    <li>75</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>© 2020- 2024</span>
+            <span class="footer-separator">·</span>
+            <span class="trm-accent-color">小菜菜</span>
+        </div>
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v6.3.0
+            </span>
+            <span class="footer-separator"> | </span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v1.2.5
+            </span>
+        </div>
+      
+
+     
+
+    
+        <div class="trm-footer-item">
+            Hosted by <a href="https://gitee.com" rel="noopener" target="_blank">Gitee Pages</a>
+        </div>
+     
+</footer>
+ 
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+          </div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  <div id="trm-back-top" class="trm-back-top">
+    <i class="fas fa-arrow-up"></i>
+</div>
+  
+<div class="trm-search-popup">
+    <div class="trm-search-header">
+        <span class="trm-search-popup-btn-close">
+            <i class="fas fa-times"></i>
+        </span>
+    </div>
+    <div class="form trm-search-form">
+        <input class="trm-search-input" type="text" placeholder="搜索...">
+    </div>
+    <div class="trm-search-result-container">
+
+    </div>
+</div>
+
+  <!-- Plugin -->
+
+
+
+    
+    
+
+    
+<script src="//cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    
+<script src="//cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+
+    
+
+    
+        <script src="/life/js/plugins/typing.js?v=1.2.5"></script>
+    
+
+    
+        
+<script src="//cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js"></script>
+
+        <script src="/life/js/plugins/local_search.js?v=1.2.5"></script>
+    
+
+    <!-- 数学公式 -->
+    
+
+
+    <!-- 评论插件 -->
+    
+        
+        
+    
+
+
+
+<!-- 评论插件 -->
+
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/life/js/main.js?v=1.2.5"></script>
+
+</body>
+
+</html>
