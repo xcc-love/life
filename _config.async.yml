@@ -149,7 +149,7 @@ reward:
   comment: I'm so cute. Please give me money.
   methods:
     - name: 支付宝
-      path: /static/img/reward/zfb.jpg
+      # path: /static/img/reward/zfb.jpg
     - name: 微信
       path: /static/img/reward/xccwx.png
 
