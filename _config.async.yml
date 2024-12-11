@@ -1,12 +1,12 @@
 # 主题模式
-theme: 
+theme:
   switch: true # 如果为 false，将不会出现主题切换按钮，只加载设置默认主题模式。
   default: style-light # 设置主题默认模式 style-light style-dark
 
 # 网站图标
 favicon:
   logo: /static/img/link.png # 顶部 logo
-  icon16: /static/img/link.png 
+  icon16: /static/img/link.png
   icon32: /static/img/link.png
   appleTouchIcon: apple-touch-icon.png # iOS 添加到桌面是图标
   webmanifest: /site.webmanifest # 应用程序清单文件
@@ -15,11 +15,11 @@ favicon:
   showText: (/≧▽≦/)咦！又好了！ # 激活窗口时显示文字
   hideText: (●—●)喔哟，崩溃啦！ # 离开窗口显示文字
 
-# CDN  
+# CDN
 # Content Delivery Network，统一加载网络资源，有利于提高网页加载速度。当您需要添加三方插件来个性您的博客时，您应该优先使用 CDN 加载文件。
 # JavaScript 资源类型说明：
 # cdn:
-#   css: 
+#   css:
 #   js:
 #     head:   # 插入到 head，其他三种默认时插入到 body 结尾的。
 #     base:   # 立即加载并执行。
@@ -28,19 +28,19 @@ favicon:
 
 # 字体图标 Icon
 # assets:
-#   icons: 
+#   icons:
 #     type: font  # 图标类型 font symbol
 #     css:   # ont-class 图标资源 url （有值或为空时，将覆盖或去除内置 Font Awesome 5 图标）
 #     js:    # 多色图标资源 url
 
 # 用户信息 User
 user:
-  name: 小菜菜      # 昵称，用于侧栏或其他区域标识
-  first_name: 菜菜  # 名，用于顶部将姓和名分别显示
-  last_name: 小     # 姓，
+  name: 小菜菜 # 昵称，用于侧栏或其他区域标识
+  first_name: 菜菜 # 名，用于顶部将姓和名分别显示
+  last_name: 小 # 姓，
   # email: xcc6667888@163.com  # 邮箱
-  domain: https://xcc-nsn.gitee.io/life/  # 域名
-  avatar: /img/avatar.jpg  # 头像
+  domain: https://xcc-nsn.gitee.io/life/ # 域名
+  avatar: /img/avatar.jpg # 头像
   describe: 这是一个小白，没错就是我，小菜菜，搞得第一个网站，记录一些文章吧 # 网站简介
   ruleText: 暂不接受个人博客以外的友链申请，确保您的网站内容积极向上，文章可有可无，花里胡哨的就行，原创70%以上，部署HTTPS。 #友链交换规则
 
@@ -53,8 +53,8 @@ search:
 
 # 导航栏 TopBars
 top_bars:
-  - title: 首页  # 标题
-    url: /  # 路径
+  - title: 首页 # 标题
+    url: / # 路径
   - title: 档案
     url: /archives/
   # - title: 分类
@@ -65,28 +65,28 @@ top_bars:
     url: /links
   - title: 关于
     url: /about
-    noswup: true  # 不使用局部刷新
+    noswup: true # 不使用局部刷新
 
 # 侧栏 Sidebar
 sidebar:
-  social:  # 社交地址
+  social: # 社交地址
     - name: github
-      icon: fab fa-github   
-      url: https://github.com 
+      icon: fab fa-github
+      url: https://github.com
     - name: weibo
       icon: fab fa-weibo
       url: https://weibo.com/u/5641726253
     - name: heart
       icon: far fa-heart
-      url: https://gitee.com/xcc-nsn
+      url: https://xcc-love.github.io/life/
   # 打字动画
-  typedTextPrefix: I`m  # 为固定前缀
-  typedText: [ 'Web Developer'] # 为打字效果切换条目，可设置多条，按顺序切换。
-  info: # 个人信息 
-    - key: 地址 
-      val: 火星       
+  typedTextPrefix: I`m # 为固定前缀
+  typedText: ["Web Developer"] # 为打字效果切换条目，可设置多条，按顺序切换。
+  info: # 个人信息
+    - key: 地址
+      val: 火星
     - key: 年龄
-      val: 18   
+      val: 18
     - key: 职业
       val: 前端小白
 
@@ -122,14 +122,14 @@ banner:
 # 页脚 Footer
 footer:
   copyrightYear: 2020
-  powered:  # 驱动
+  powered: # 驱动
     enable: true
-  custom_text: Hosted by <a href="https://gitee.com" rel="noopener" target="_blank">Gitee Pages</a>
+  custom_text: Hosted by <a href="https://github.com" rel="noopener" target="_blank">Gitee Pages</a>
 
 # 友链 Links
 links:
-  - name: 张小婷
-    url: https://xcc-nsn.gitee.io/life/
+  - name: 小菜菜
+    url: https://xcc-love.github.io/life/
     image: //www.imalun.com/images/avatar.jpg
     desc: 醒，亦在人间；梦，亦在人间
   - name: CWG
@@ -139,26 +139,26 @@ links:
 
 # 关于 ABOUT
 about:
-  title:  如果一切都是镜花水月，那就让这万物走向终结。如果一切皆是命中注定，那就让这世界消失殆尽。  # 标题
+  title: 如果一切都是镜花水月，那就让这万物走向终结。如果一切皆是命中注定，那就让这世界消失殆尽。 # 标题
   introduction: name：小菜菜 <br /> email：xcc6667888@163.com # 个人简单描述
-  blog: name：Life <br /> introduce：主要用来发表一些学习的文章和其它文章   # 博客信息
-  privacy: 没有隐私，还不知道怎么让你们评论，先看着吧     # 隐私权说明    
+  blog: name：Life <br /> introduce：主要用来发表一些学习的文章和其它文章 # 博客信息
+  privacy: 没有隐私，还不知道怎么让你们评论，先看着吧 # 隐私权说明
 # 打赏 Reward
 reward:
   enable: true
   comment: I'm so cute. Please give me money.
   methods:
     - name: 支付宝
-      # path: /static/img/reward/zfb.jpg
+      path: /static/img/reward/zfb1.jpg
     - name: 微信
       path: /static/img/reward/xccwx.png
 
 # 文章目录
 toc:
-  enable: true  # 是否开启
-  list_number: true  # 是否显示编号
-  max_depth: 3  # 生成 TOC 的最大深度
-  min_depth: 1  # 生成 TOC 的最小深度
+  enable: true # 是否开启
+  list_number: true # 是否显示编号
+  max_depth: 3 # 生成 TOC 的最大深度
+  min_depth: 1 # 生成 TOC 的最小深度
 
 # 图片懒加载
 # lazyload:
@@ -167,8 +167,8 @@ toc:
 # 字数统计
 wordcount:
   enable: true
-  count: true  # 字数统计
-  time: false  # 阅读时间
+  count: true # 字数统计
+  time: false # 阅读时间
 
 # 归档页  默认下归档页时间轴卡片显示了标题和摘要信息，如果设置为 less 将只显示标题。
 archive:
@@ -178,24 +178,24 @@ archive:
 creative_commons:
   license: by-nc-sa
   language: deed.zh
-  post: false  # 在每篇文章末尾显示
-  clipboard: false  # 是否在复制文章时，在剪贴板中追加版权信息（默认关闭）
+  post: false # 在每篇文章末尾显示
+  clipboard: false # 是否在复制文章时，在剪贴板中追加版权信息（默认关闭）
 
 # 自定义封面图
 # 当您没有设置文章封面图时，将会显示主题内置的封面图，您可以通过修改配置来替换默认行为。
 cover:
-  default: /img/block.jpg  # 封面默认显示的图片
-  type: img  # 封面显示类型，可选 img || date
+  default: /img/block.jpg # 封面默认显示的图片
+  type: img # 封面显示类型，可选 img || date
 
 # 日期格式化 Date Format 用于配置主题中使用日期的格式。
 datetime_foramt:
-  post_card:  # 文章卡片的格式
+  post_card: # 文章卡片的格式
     date: YY-MM-DD
     time: HH:mm
-  post_info:  # 文章详情页里的格式
+  post_info: # 文章详情页里的格式
     date: MM-DD
     time: HH:mm
-  archive:  # 归档分类页的格式
+  archive: # 归档分类页的格式
     date: MM-DD
     time: HH:mm
 
@@ -224,6 +224,5 @@ icons:
   close: fas fa-times
   # 打赏 v1.1.7+
   reward: fas fa-hand-holding-usd
-
 # 自定义样式 Style
 # 相比 head 引入，您可以直接编写 less 文件，并使用主题已有的变量，且将和主题样式文件一起编译。
